@@ -27,42 +27,42 @@ spring:
         - id: lodge
           uri: lb://lodge
           predicates:
-            - Path=/api/lodges/**, /api-docs-lodge
+            - Path=/api/lodges/**,/internal/lodges/**,/api-docs-lodge
 
         - id: chat
           uri: lb://reservation
           predicates:
-            - Path=/api/reservations/**, /api-docs-reservation
+            - Path=/api/reservations/**,/internal/reservations/**,/api-docs-reservation
 
         - id: coupon
           uri: lb://coupon
           predicates:
-            - Path=/api/coupons/**, /api-docs-coupon
+            - Path=/api/coupons/**,/internal/coupons/**,/api-docs-coupon
 
         - id: notification
           uri: lb://notification
           predicates:
-            - Path=/api/notifications/**, /api-docs-notification
+            - Path=/api/notifications/**,/internal/notifications/**,/api-docs-notification
 
         - id: payment
           uri: lb://payment
           predicates:
-            - Path=/api/payments/**, /api-docs-payment
+            - Path=/api/payments/**,/internal/payments/**,/api-docs-payment
 
         - id: review
           uri: lb://review
           predicates:
-            - Path=/api/reviews/**, /api-docs-review
+            - Path=/api/reviews/**,/internal/reviews/**,/api-docs-review
 
         - id: user
           uri: lb://user
           predicates:
-            - Path=/api/users/**, /v3/api-docs/user, /api-docs-user
+            - Path=/api/users/**,/internal/users/**,/api-docs-user
 
         - id: auth
           uri: lb://auth
           predicates:
-            - Path=/api/auth/**, /v3/api-docs/auth, /api-docs-auth
+            - Path=/api/auth/**,/api-docs-auth
 
 
 
