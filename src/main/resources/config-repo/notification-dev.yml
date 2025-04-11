@@ -8,3 +8,7 @@ spring:
     import:
       - classpath:properties/datasource.yml
       - classpath:properties/jpa.yml
+  jpa:
+    properties:
+      hibernate:
+        default_schema: notifications
