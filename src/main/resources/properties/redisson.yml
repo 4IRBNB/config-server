@@ -1,0 +1,4 @@
+redisson:
+  config: |
+    singleServerConfig:
+      address: "redis://redis:6379"
