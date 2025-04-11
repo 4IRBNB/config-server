@@ -57,7 +57,12 @@ spring:
         - id: user
           uri: lb://user
           predicates:
-            - Path=/api/users/**, /api/auth/**, /v3/api-docs/user, /api-docs-user
+            - Path=/api/users/**, /v3/api-docs/user, /api-docs-user
+
+        - id: auth
+          uri: lb://auth
+          predicates:
+            - Path=/api/auth/**, /v3/api-docs/auth, /api-docs-auth
 
 
 

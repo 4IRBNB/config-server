@@ -1,21 +1,14 @@
 server:
-  port: 19104
+  port: 19095
 
 spring:
   application:
     name: reservation
+  config:
+    import:
+      - classpath:properties/datasource.yml
+      - classpath:properties/jpa.yml
   jpa:
-    database-platform: org.hibernate.dialect.PostgreSQLDialect
-    hibernate:
-      ddl-auto: update
     properties:
       hibernate:
-        show_sql: true
-        format_sql: true
-        use_sql_comments: true
         default_schema: reservations
-  datasource:
-    url: jdbc:postgresql://localhost:5432/4IRBNB
-    username: postgres
-    password: fourirbnb
-    driver-class-name: org.postgresql.Driver

@@ -1,21 +1,14 @@
 server:
-  port: 19103
+  port: 19096
 
 spring:
   application:
     name: payment
+  config:
+    import:
+      - classpath:properties/datasource.yml
+      - classpath:properties/jpa.yml
   jpa:
-    database-platform: org.hibernate.dialect.PostgreSQLDialect
-    hibernate:
-      ddl-auto: update
     properties:
       hibernate:
-        show_sql: true
-        format_sql: true
-        use_sql_comments: true
         default_schema: payments
-  datasource:
-    url: jdbc:postgresql://localhost:5432/4IRBNB
-    username: postgres
-    password: fourirbnb
-    driver-class-name: org.postgresql.Driver
